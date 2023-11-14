@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- pay_v1_payschedule.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

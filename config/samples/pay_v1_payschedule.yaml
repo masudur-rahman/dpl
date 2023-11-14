@@ -1,0 +1,15 @@
+apiVersion: pay.pathao.com/v1
+kind: PaySchedule
+metadata:
+  labels:
+    app.kubernetes.io/name: payschedule
+    app.kubernetes.io/instance: payschedule-sample
+    app.kubernetes.io/part-of: dpl
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: dpl
+  name: payschedule-sample
+spec:
+  cronName: "pay-cron"
+  cronSchedule: "*/1 * * * *"
+  jobImage: "busybox:latest"
+  jobCmd: "echo Hello Pathao Pay!"
